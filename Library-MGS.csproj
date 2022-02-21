@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,6 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\BookData.cs" />
+    <Compile Include="Classes\DBConnection.cs" />
+    <Compile Include="Classes\UserLogin.cs" />
     <Compile Include="Forms\BlacklistForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +98,24 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modals\BookModals\CreateBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modals\BookModals\CreateBook.Designer.cs">
+      <DependentUpon>CreateBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modals\BookModals\DeleteBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modals\BookModals\DeleteBook.Designer.cs">
+      <DependentUpon>DeleteBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modals\BookModals\UpdateBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modals\BookModals\UpdateBook.Designer.cs">
+      <DependentUpon>UpdateBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\BlacklistForm.resx">
@@ -119,6 +141,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modals\BookModals\CreateBook.resx">
+      <DependentUpon>CreateBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modals\BookModals\DeleteBook.resx">
+      <DependentUpon>DeleteBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modals\BookModals\UpdateBook.resx">
+      <DependentUpon>UpdateBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -192,6 +223,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\login_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box_important_80px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

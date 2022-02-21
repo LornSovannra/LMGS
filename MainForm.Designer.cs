@@ -300,7 +300,6 @@ namespace Library_MGS
 
         private System.Windows.Forms.Panel pnNavigation;
         private System.Windows.Forms.Panel pnHeader;
-        private System.Windows.Forms.Panel pnDesktop;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDashboard;
@@ -312,6 +311,7 @@ namespace Library_MGS
         private System.Windows.Forms.Button btnBook;
         private System.Windows.Forms.PictureBox pbExit;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Panel pnDesktop;
     }
 }
 
