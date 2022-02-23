@@ -66,37 +66,6 @@ namespace Library_MGS.Forms
             txtLibrarianID.Focus();
         }
 
-        private void pbPhoto_Click(object sender, EventArgs e)
-        {
-            ofdPhoto.FilterIndex = 4;
-            ofdPhoto.Filter = ("Images | *.png; *.jpg; *.jpeg; *.bmp;");
-            ofdPhoto.FileName = string.Empty;
-
-            //get image and show back in openFileDialog
-            if (ofdPhoto.ShowDialog() == DialogResult.OK)
-            {
-                pbPhoto.Image = Image.FromFile(ofdPhoto.FileName);
-            }
-        }
-
-        private void btnSelectPhoto_Click(object sender, EventArgs e)
-        {
-            ofdPhoto.FilterIndex = 4;
-            ofdPhoto.Filter = ("Images | *.png; *.jpg; *.jpeg; *.bmp;");
-            ofdPhoto.FileName = string.Empty;
-
-            //get image and show back in openFileDialog
-            if (ofdPhoto.ShowDialog() == DialogResult.OK)
-            {
-                pbPhoto.Image = Image.FromFile(ofdPhoto.FileName);
-            }
-        }
-
-        private void btnRemovePhoto_Click(object sender, EventArgs e)
-        {
-            pbPhoto.Image = Resources.Avatar;
-        }
-
         void GenderDropDown()
         {
             List<string> gender = new List<string>();
@@ -178,6 +147,37 @@ namespace Library_MGS.Forms
             {
                 cbAddress.Items.Add(addressList);
             }
+        }
+
+        private void pbPhoto_Click(object sender, EventArgs e)
+        {
+            ofdPhoto.FilterIndex = 4;
+            ofdPhoto.Filter = ("Images | *.png; *.jpg; *.jpeg; *.bmp;");
+            ofdPhoto.FileName = string.Empty;
+
+            //get image and show back in openFileDialog
+            if (ofdPhoto.ShowDialog() == DialogResult.OK)
+            {
+                pbPhoto.Image = Image.FromFile(ofdPhoto.FileName);
+            }
+        }
+
+        private void btnSelectPhoto_Click(object sender, EventArgs e)
+        {
+            ofdPhoto.FilterIndex = 4;
+            ofdPhoto.Filter = ("Images | *.png; *.jpg; *.jpeg; *.bmp;");
+            ofdPhoto.FileName = string.Empty;
+
+            //get image and show back in openFileDialog
+            if (ofdPhoto.ShowDialog() == DialogResult.OK)
+            {
+                pbPhoto.Image = Image.FromFile(ofdPhoto.FileName);
+            }
+        }
+
+        private void btnRemovePhoto_Click(object sender, EventArgs e)
+        {
+            pbPhoto.Image = Resources.Avatar;
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
