@@ -21,37 +21,36 @@ namespace Library_MGS.Modals.BookModals
         }
 
         string BookID;
-        string BookTitle;
 
         private void DeleteBook_Load(object sender, EventArgs e)
         {
-            BookID = Classes.BookData.getBookID();
-            BookTitle = Classes.BookData.getBookTitle();
+            //BookID = Classes.BookData.getBookID();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             try
             {
-                if (MessageBox.Show("Are you sure to delete, " + BookTitle + "?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    string sql = "DELETE tblBook WHERE BookID = :1";
-                    OracleCommand delete_cmd = new OracleCommand(sql, conn);
-                    delete_cmd.Parameters.Add(new OracleParameter("1", Int32.Parse(BookID)));
+                string sql = "DELETE FROM tblBook WHERE BookID = :1";
+                OracleCommand delete_cmd = new OracleCommand(sql, conn);
+                //delete_cmd.CommandType = CommandType.StoredProcedure;
+                delete_cmd.Parameters.Add("1", 41);
 
-                    if (delete_cmd.ExecuteNonQuery() > 0)
-                    {
-                        MessageBox.Show("One record has deleted from Database!", "CREATED", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Fail to delete!", "FAIL", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                if (delete_cmd.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("One record has deleted from Database!", "CREATED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                 }
+                else
+                {
+                    MessageBox.Show("Fail to delete!", "FAIL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                //MessageBox.Show(Classes.BookData.getBookTitle());
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("Errpr: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

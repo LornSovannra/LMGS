@@ -118,11 +118,77 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="librarian_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\librarian_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="available_updates_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\available_updates_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="available_updates_34px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\available_updates_34px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="return_book_48px2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\return_book_48px2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="return_book_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\return_book_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blacklist_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blacklist_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="return_book_48px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\return_book_48px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="borrow_book_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\borrow_book_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="dashboard_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dashboard_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="blacklist_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blacklist_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="librarian_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\librarian_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="borrow_book_32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\borrow_book_32px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="refresh_60px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refresh_60px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Close_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Close_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="student_male_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\student_male_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="student_male_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\student_male_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="reading_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reading_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="book_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\book_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="return_book_48px3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\return_book_48px3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="return_book_64px_229, 56, 591" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\return_book_64px_229, 56, 591.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="return_book_64px_229, 56, 59" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\return_book_64px_229, 56, 59.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="box_important_80px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\box_important_80px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="login_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="book_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\book_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="login_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,40 +196,10 @@
   <data name="borrow_book_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\borrow_book_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="return_book_48px2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\return_book_48px2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="student_male_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\student_male_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="reading_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\reading_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="return_book_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\return_book_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="login_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\login_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="librarian_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\librarian_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="return_book_48px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\return_book_48px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="borrow_book_32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\borrow_book_32px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="book_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\book_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blacklist_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blacklist_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="dashboard_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dashboard_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="box_important_80px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\box_important_80px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Avatar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Avatar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

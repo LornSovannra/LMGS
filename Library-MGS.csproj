@@ -227,5 +227,41 @@
   <ItemGroup>
     <None Include="Resources\box_important_80px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\return_book_48px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\return_book_64px_229, 56, 59.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\return_book_64px_229, 56, 591.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrow_book_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student_male_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blacklist_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\librarian_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_60px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\available_updates_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\available_updates_34px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Avatar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

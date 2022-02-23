@@ -63,6 +63,36 @@ namespace Library_MGS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap available_updates_34px {
+            get {
+                object obj = ResourceManager.GetObject("available_updates_34px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap available_updates_96px {
+            get {
+                object obj = ResourceManager.GetObject("available_updates_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Avatar {
+            get {
+                object obj = ResourceManager.GetObject("Avatar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap blacklist_32px {
             get {
                 object obj = ResourceManager.GetObject("blacklist_32px", resourceCulture);
@@ -73,9 +103,29 @@ namespace Library_MGS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap blacklist_64px {
+            get {
+                object obj = ResourceManager.GetObject("blacklist_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap book_32px {
             get {
                 object obj = ResourceManager.GetObject("book_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap book_64px {
+            get {
+                object obj = ResourceManager.GetObject("book_64px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +146,16 @@ namespace Library_MGS.Properties {
         internal static System.Drawing.Bitmap borrow_book_32px1 {
             get {
                 object obj = ResourceManager.GetObject("borrow_book_32px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap borrow_book_64px {
+            get {
+                object obj = ResourceManager.GetObject("borrow_book_64px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,6 +213,16 @@ namespace Library_MGS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap librarian_64px {
+            get {
+                object obj = ResourceManager.GetObject("librarian_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap login_30px {
             get {
                 object obj = ResourceManager.GetObject("login_30px", resourceCulture);
@@ -176,6 +246,16 @@ namespace Library_MGS.Properties {
         internal static System.Drawing.Bitmap reading_100px {
             get {
                 object obj = ResourceManager.GetObject("reading_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap refresh_60px {
+            get {
+                object obj = ResourceManager.GetObject("refresh_60px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +293,49 @@ namespace Library_MGS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap return_book_48px3 {
+            get {
+                object obj = ResourceManager.GetObject("return_book_48px3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap return_book_64px_229__56__59 {
+            get {
+                object obj = ResourceManager.GetObject("return_book_64px_229, 56, 59", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap return_book_64px_229__56__591 {
+            get {
+                object obj = ResourceManager.GetObject("return_book_64px_229, 56, 591", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap student_male_32px {
             get {
                 object obj = ResourceManager.GetObject("student_male_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap student_male_64px {
+            get {
+                object obj = ResourceManager.GetObject("student_male_64px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -28,14 +28,14 @@ namespace Library_MGS.Forms
 
         void LoadData()
         {
-            string sql = "SELECT * FROM tblBook ORDER BY BookID ASC";
+            string sql = "SELECT tblBook.BookID, tblBook.BookTitle, tblBook.PublishDate, tblBook.NumOfPages, tblBook.NumCopies, tblBook.Edition, tblBook.Publisher," +
+                         "tblBook.BookSource, tblBookType.TypeName, tblBook.Remark FROM tblBook, tblBookType WHERE tblBookType.BookTypeID = tblBook.BookTypeID ORDER BY tblBook.BookID ASC";
             OracleCommand search_cmd = new OracleCommand(sql, conn);
             OracleDataAdapter adapter = new OracleDataAdapter(search_cmd);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
 
             dgvBook.DataSource = dt;
-            dgvBook.ClearSelection();
 
             btnUpdate.Enabled = false;
             btnDelete.Enabled = false;
@@ -57,16 +57,27 @@ namespace Library_MGS.Forms
             btnUpdate.Enabled = true;
             btnDelete.Enabled = true;
 
-            BookID = dgvBook.CurrentRow.Cells[0].Value.ToString();
-            BookTitle = dgvBook.CurrentRow.Cells[1].Value.ToString();
-            PublishDate = dgvBook.CurrentRow.Cells[2].Value.ToString();
-            NumOfPages = dgvBook.CurrentRow.Cells[3].Value.ToString();
-            NumCopies = dgvBook.CurrentRow.Cells[4].Value.ToString();
-            Edition = dgvBook.CurrentRow.Cells[5].Value.ToString();
-            Publisher = dgvBook.CurrentRow.Cells[6].Value.ToString();
-            BookSource = dgvBook.CurrentRow.Cells[7].Value.ToString();
-            BookTypeID = dgvBook.CurrentRow.Cells[8].Value.ToString();
-            Remark = dgvBook.CurrentRow.Cells[9].Value.ToString();
+            //BookID = dgvBook.CurrentRow.Cells[0].Value.ToString();
+            //BookTitle = dgvBook.CurrentRow.Cells[1].Value.ToString();
+            //PublishDate = dgvBook.CurrentRow.Cells[2].Value.ToString();
+            //NumOfPages = dgvBook.CurrentRow.Cells[3].Value.ToString();
+            //NumCopies = dgvBook.CurrentRow.Cells[4].Value.ToString();
+            //Edition = dgvBook.CurrentRow.Cells[5].Value.ToString();
+            //Publisher = dgvBook.CurrentRow.Cells[6].Value.ToString();
+            //BookSource = dgvBook.CurrentRow.Cells[7].Value.ToString();
+            //BookTypeID = dgvBook.CurrentRow.Cells[8].Value.ToString();
+            //Remark = dgvBook.CurrentRow.Cells[9].Value.ToString();
+
+            Classes.BookData.setBookID(dgvBook.CurrentRow.Cells[0].Value.ToString());
+            Classes.BookData.setBookTitle(dgvBook.CurrentRow.Cells[1].Value.ToString());
+            Classes.BookData.setPublishDate(dgvBook.CurrentRow.Cells[2].Value.ToString());
+            Classes.BookData.setNumOfPages(dgvBook.CurrentRow.Cells[3].Value.ToString());
+            Classes.BookData.setNumCopies(dgvBook.CurrentRow.Cells[4].Value.ToString());
+            Classes.BookData.setEdition(dgvBook.CurrentRow.Cells[5].Value.ToString());
+            Classes.BookData.setPublisher(dgvBook.CurrentRow.Cells[6].Value.ToString());
+            Classes.BookData.setBookSource(dgvBook.CurrentRow.Cells[7].Value.ToString());
+            Classes.BookData.setBookTypeID(dgvBook.CurrentRow.Cells[8].Value.ToString());
+            Classes.BookData.setRemark(dgvBook.CurrentRow.Cells[9].Value.ToString());
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
@@ -85,23 +96,29 @@ namespace Library_MGS.Forms
         private void btnDelete_Click(object sender, EventArgs e)
         {
             Modals.BookModals.DeleteBook db = new Modals.BookModals.DeleteBook();
-            Classes.BookData.setBookID(BookID.ToString());
+            //Classes.BookData.setBookID(BookID);
             db.FormBorderStyle = FormBorderStyle.None;
             db.ShowDialog();
+
         }
 
         void SetData()
         {
-            Classes.BookData.setBookID(BookID.ToString());
-            Classes.BookData.setBookTitle(BookTitle.ToString());
-            Classes.BookData.setPublishDate(PublishDate.ToString());
-            Classes.BookData.setNumOfPages(NumOfPages.ToString());
-            Classes.BookData.setNumCopies(NumCopies.ToString());
-            Classes.BookData.setEdition(Edition.ToString());
-            Classes.BookData.setPublisher(Publisher.ToString());
-            Classes.BookData.setBookSource(BookSource.ToString());
-            Classes.BookData.setBookTypeID(BookTypeID.ToString());
-            Classes.BookData.setRemark(Remark.ToString());
+            //Classes.BookData.setBookID(BookID.ToString());
+            //Classes.BookData.setBookTitle(BookTitle.ToString());
+            //Classes.BookData.setPublishDate(PublishDate.ToString());
+            //Classes.BookData.setNumOfPages(NumOfPages.ToString());
+            //Classes.BookData.setNumCopies(NumCopies.ToString());
+            //Classes.BookData.setEdition(Edition.ToString());
+            //Classes.BookData.setPublisher(Publisher.ToString());
+            //Classes.BookData.setBookSource(BookSource.ToString());
+            //Classes.BookData.setBookTypeID(BookTypeID.ToString());
+            //Classes.BookData.setRemark(Remark.ToString());
+        }
+
+        private void btnRefesh_Click(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }

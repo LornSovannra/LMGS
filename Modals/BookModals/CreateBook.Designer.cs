@@ -63,7 +63,7 @@ namespace Library_MGS.Modals.BookModals
             this.btnClose.Location = new System.Drawing.Point(835, 359);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(104, 50);
-            this.btnClose.TabIndex = 46;
+            this.btnClose.TabIndex = 11;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -78,7 +78,7 @@ namespace Library_MGS.Modals.BookModals
             this.btnCreate.Location = new System.Drawing.Point(687, 359);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(125, 50);
-            this.btnCreate.TabIndex = 45;
+            this.btnCreate.TabIndex = 10;
             this.btnCreate.Text = "Create";
             this.btnCreate.UseVisualStyleBackColor = false;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
@@ -89,7 +89,7 @@ namespace Library_MGS.Modals.BookModals
             this.rtbRemark.Location = new System.Drawing.Point(687, 186);
             this.rtbRemark.Name = "rtbRemark";
             this.rtbRemark.Size = new System.Drawing.Size(252, 149);
-            this.rtbRemark.TabIndex = 44;
+            this.rtbRemark.TabIndex = 9;
             this.rtbRemark.Text = "";
             // 
             // label10
@@ -119,7 +119,7 @@ namespace Library_MGS.Modals.BookModals
             this.cbBookTypeID.Location = new System.Drawing.Point(687, 136);
             this.cbBookTypeID.Name = "cbBookTypeID";
             this.cbBookTypeID.Size = new System.Drawing.Size(252, 28);
-            this.cbBookTypeID.TabIndex = 41;
+            this.cbBookTypeID.TabIndex = 8;
             this.cbBookTypeID.SelectedIndexChanged += new System.EventHandler(this.cbBookTypeID_SelectedIndexChanged);
             // 
             // label5
@@ -138,7 +138,7 @@ namespace Library_MGS.Modals.BookModals
             this.txtBookSource.Location = new System.Drawing.Point(687, 74);
             this.txtBookSource.Name = "txtBookSource";
             this.txtBookSource.Size = new System.Drawing.Size(252, 39);
-            this.txtBookSource.TabIndex = 39;
+            this.txtBookSource.TabIndex = 7;
             // 
             // label8
             // 
@@ -157,7 +157,7 @@ namespace Library_MGS.Modals.BookModals
             this.cbPublisher.Location = new System.Drawing.Point(687, 31);
             this.cbPublisher.Name = "cbPublisher";
             this.cbPublisher.Size = new System.Drawing.Size(252, 28);
-            this.cbPublisher.TabIndex = 37;
+            this.cbPublisher.TabIndex = 6;
             // 
             // label7
             // 
@@ -176,7 +176,7 @@ namespace Library_MGS.Modals.BookModals
             this.cbEdition.Location = new System.Drawing.Point(180, 307);
             this.cbEdition.Name = "cbEdition";
             this.cbEdition.Size = new System.Drawing.Size(276, 28);
-            this.cbEdition.TabIndex = 35;
+            this.cbEdition.TabIndex = 5;
             // 
             // dtpPublishDate
             // 
@@ -184,7 +184,7 @@ namespace Library_MGS.Modals.BookModals
             this.dtpPublishDate.Location = new System.Drawing.Point(180, 134);
             this.dtpPublishDate.Name = "dtpPublishDate";
             this.dtpPublishDate.Size = new System.Drawing.Size(276, 26);
-            this.dtpPublishDate.TabIndex = 34;
+            this.dtpPublishDate.TabIndex = 2;
             // 
             // label6
             // 
@@ -212,7 +212,7 @@ namespace Library_MGS.Modals.BookModals
             this.txtNumOfPages.Location = new System.Drawing.Point(180, 182);
             this.txtNumOfPages.Name = "txtNumOfPages";
             this.txtNumOfPages.Size = new System.Drawing.Size(276, 39);
-            this.txtNumOfPages.TabIndex = 31;
+            this.txtNumOfPages.TabIndex = 3;
             // 
             // label3
             // 
@@ -230,7 +230,7 @@ namespace Library_MGS.Modals.BookModals
             this.txtNumCopies.Location = new System.Drawing.Point(180, 241);
             this.txtNumCopies.Name = "txtNumCopies";
             this.txtNumCopies.Size = new System.Drawing.Size(276, 39);
-            this.txtNumCopies.TabIndex = 29;
+            this.txtNumCopies.TabIndex = 4;
             // 
             // label2
             // 
@@ -248,7 +248,7 @@ namespace Library_MGS.Modals.BookModals
             this.txtBookTitle.Location = new System.Drawing.Point(180, 74);
             this.txtBookTitle.Name = "txtBookTitle";
             this.txtBookTitle.Size = new System.Drawing.Size(276, 39);
-            this.txtBookTitle.TabIndex = 27;
+            this.txtBookTitle.TabIndex = 1;
             // 
             // label1
             // 
@@ -267,7 +267,7 @@ namespace Library_MGS.Modals.BookModals
             this.txtBookID.Location = new System.Drawing.Point(180, 20);
             this.txtBookID.Name = "txtBookID";
             this.txtBookID.Size = new System.Drawing.Size(276, 39);
-            this.txtBookID.TabIndex = 25;
+            this.txtBookID.TabIndex = 0;
             // 
             // CreateBook
             // 

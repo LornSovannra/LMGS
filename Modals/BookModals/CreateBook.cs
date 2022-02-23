@@ -23,7 +23,7 @@ namespace Library_MGS.Modals.BookModals
 
         private void CreateBook_Load(object sender, EventArgs e)
         {
-            //EditionDropDown();
+            EditionDropDown();
             //BookTypeIDDropDown();
 
         }
