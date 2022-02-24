@@ -80,11 +80,23 @@
     <Compile Include="Forms\LibrarianForm.Designer.cs">
       <DependentUpon>LibrarianForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ReturnForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\ReturnForm.Designer.cs">
       <DependentUpon>ReturnForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\StudentForm.cs">
       <SubType>Form</SubType>
@@ -133,8 +145,14 @@
     <EmbeddedResource Include="Forms\LibrarianForm.resx">
       <DependentUpon>LibrarianForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ReturnForm.resx">
       <DependentUpon>ReturnForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\StudentForm.resx">
       <DependentUpon>StudentForm.cs</DependentUpon>
@@ -262,6 +280,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c849fc0ef9c0642f53cbbf864c554465.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LMGS Login Image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visible_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visible_24px_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invisible_24px_new.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

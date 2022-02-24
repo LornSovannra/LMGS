@@ -11,6 +11,7 @@ namespace Library_MGS.Classes
         //Static Fields
         private static string LibrarianID;
         private static string LibrarianName;
+        private static string UserType;
 
         //Setter Methods
         public static void setLibrarianID(string id)
@@ -23,6 +24,11 @@ namespace Library_MGS.Classes
             LibrarianName = photo;
         }
 
+        public static void setUserType(string userType)
+        {
+            UserType = userType;
+        }
+
         //Getter Methods
         public static string getLibrarianID()
         {
@@ -33,5 +39,11 @@ namespace Library_MGS.Classes
         {
             return LibrarianName;
         }
+
+        public static string getUserType()
+        {
+            return UserType;
+        }
     }
 }
+

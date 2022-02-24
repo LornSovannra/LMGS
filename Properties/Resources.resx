@@ -121,8 +121,17 @@
   <data name="librarian_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\librarian_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="visible_24px_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\visible_24px_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="c849fc0ef9c0642f53cbbf864c554465" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\c849fc0ef9c0642f53cbbf864c554465.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="available_updates_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\available_updates_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LMGS Login Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LMGS Login Image.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="available_updates_34px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\available_updates_34px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,6 +157,9 @@
   <data name="blacklist_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blacklist_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="login_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="librarian_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\librarian_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -166,9 +178,6 @@
   <data name="student_male_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\student_male_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="reading_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\reading_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="book_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\book_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -178,14 +187,17 @@
   <data name="return_book_64px_229, 56, 591" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\return_book_64px_229, 56, 591.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Avatar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Avatar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="return_book_64px_229, 56, 59" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\return_book_64px_229, 56, 59.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="box_important_80px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\box_important_80px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="login_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\login_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="reading_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reading_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="book_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\book_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,10 +208,13 @@
   <data name="borrow_book_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\borrow_book_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="visible_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\visible_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="dashboard_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dashboard_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Avatar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Avatar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="invisible_24px_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\invisible_24px_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -118,7 +118,12 @@ namespace Library_MGS
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-
+            if (MessageBox.Show("Do you want to logout from the system?", "You're going to log out from the system.", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Forms.LoginForm lf = new Forms.LoginForm();
+                this.Hide();
+                lf.Show();
+            }
         }
 
         private void pbExit_Click(object sender, EventArgs e)

@@ -173,6 +173,16 @@ namespace Library_MGS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap c849fc0ef9c0642f53cbbf864c554465 {
+            get {
+                object obj = ResourceManager.GetObject("c849fc0ef9c0642f53cbbf864c554465", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Close_512px {
             get {
                 object obj = ResourceManager.GetObject("Close_512px", resourceCulture);
@@ -203,6 +213,16 @@ namespace Library_MGS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap invisible_24px_new {
+            get {
+                object obj = ResourceManager.GetObject("invisible_24px_new", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap librarian_32px {
             get {
                 object obj = ResourceManager.GetObject("librarian_32px", resourceCulture);
@@ -216,6 +236,16 @@ namespace Library_MGS.Properties {
         internal static System.Drawing.Bitmap librarian_64px {
             get {
                 object obj = ResourceManager.GetObject("librarian_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LMGS_Login_Image {
+            get {
+                object obj = ResourceManager.GetObject("LMGS Login Image", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -336,6 +366,26 @@ namespace Library_MGS.Properties {
         internal static System.Drawing.Bitmap student_male_64px {
             get {
                 object obj = ResourceManager.GetObject("student_male_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap visible_24px {
+            get {
+                object obj = ResourceManager.GetObject("visible_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap visible_24px_new {
+            get {
+                object obj = ResourceManager.GetObject("visible_24px_new", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
