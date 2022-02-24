@@ -13,11 +13,11 @@ using Library_MGS.Properties;
 
 namespace Library_MGS.Forms
 {
-    public partial class LibrarianForm : Form
+    public partial class Librarian : Form
     {
         OracleConnection conn;
 
-        public LibrarianForm()
+        public Librarian()
         {
             InitializeComponent();
         }

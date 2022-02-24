@@ -1,7 +1,7 @@
 ﻿
 namespace Library_MGS.Forms
 {
-    partial class LibrarianForm
+    partial class Librarian
     {
         /// <summary>
         /// Required designer variable.
@@ -30,15 +30,13 @@ namespace Library_MGS.Forms
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtSearch = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnRemovePhoto = new System.Windows.Forms.Button();
             this.btnSelectPhoto = new System.Windows.Forms.Button();
+            this.pbPhoto = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -59,14 +57,16 @@ namespace Library_MGS.Forms
             this.txtLibrarianName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtLibrarianID = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgvLibrarian = new System.Windows.Forms.DataGridView();
             this.ofdPhoto = new System.Windows.Forms.OpenFileDialog();
-            this.pbPhoto = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLibrarian)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPhoto)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLibrarian)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -82,37 +82,6 @@ namespace Library_MGS.Forms
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1205, 662);
             this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.txtSearch);
-            this.panel2.Location = new System.Drawing.Point(5, 304);
-            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 4, 5);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1175, 46);
-            this.panel2.TabIndex = 3;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(5, 7);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(280, 31);
-            this.label11.TabIndex = 59;
-            this.label11.Text = "SEARCH LIBRARIAN";
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(291, 4);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(884, 38);
-            this.txtSearch.TabIndex = 0;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // panel1
             // 
@@ -223,6 +192,18 @@ namespace Library_MGS.Forms
             this.btnSelectPhoto.Text = "Select Photo";
             this.btnSelectPhoto.UseVisualStyleBackColor = false;
             this.btnSelectPhoto.Click += new System.EventHandler(this.btnSelectPhoto_Click);
+            // 
+            // pbPhoto
+            // 
+            this.pbPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbPhoto.Image = global::Library_MGS.Properties.Resources.Avatar;
+            this.pbPhoto.Location = new System.Drawing.Point(799, 14);
+            this.pbPhoto.Name = "pbPhoto";
+            this.pbPhoto.Size = new System.Drawing.Size(156, 151);
+            this.pbPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPhoto.TabIndex = 90;
+            this.pbPhoto.TabStop = false;
+            this.pbPhoto.Click += new System.EventHandler(this.pbPhoto_Click);
             // 
             // label10
             // 
@@ -425,6 +406,37 @@ namespace Library_MGS.Forms
             this.txtLibrarianID.Size = new System.Drawing.Size(217, 39);
             this.txtLibrarianID.TabIndex = 0;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.txtSearch);
+            this.panel2.Location = new System.Drawing.Point(5, 304);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 4, 5);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1175, 46);
+            this.panel2.TabIndex = 3;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(5, 7);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(280, 31);
+            this.label11.TabIndex = 59;
+            this.label11.Text = "SEARCH LIBRARIAN";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(291, 4);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(884, 38);
+            this.txtSearch.TabIndex = 0;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
             // dgvLibrarian
             // 
             this.dgvLibrarian.AllowUserToAddRows = false;
@@ -447,34 +459,22 @@ namespace Library_MGS.Forms
             // 
             this.ofdPhoto.FileName = "openFileDialog1";
             // 
-            // pbPhoto
-            // 
-            this.pbPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbPhoto.Image = global::Library_MGS.Properties.Resources.Avatar;
-            this.pbPhoto.Location = new System.Drawing.Point(799, 14);
-            this.pbPhoto.Name = "pbPhoto";
-            this.pbPhoto.Size = new System.Drawing.Size(156, 151);
-            this.pbPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbPhoto.TabIndex = 90;
-            this.pbPhoto.TabStop = false;
-            this.pbPhoto.Click += new System.EventHandler(this.pbPhoto_Click);
-            // 
-            // LibrarianForm
+            // Librarian
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1205, 662);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Name = "LibrarianForm";
-            this.Text = "LibrarianForm";
+            this.Name = "Librarian";
+            this.Text = "Librarian";
             this.Load += new System.EventHandler(this.LibrarianForm_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLibrarian)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPhoto)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLibrarian)).EndInit();
             this.ResumeLayout(false);
 
         }

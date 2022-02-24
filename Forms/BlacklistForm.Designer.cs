@@ -123,7 +123,7 @@ namespace Library_MGS.Forms
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "BlacklistForm";
-            this.Text = "BlacklistForm";
+            this.Text = "Blacklist";
             this.Load += new System.EventHandler(this.BlacklistForm_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

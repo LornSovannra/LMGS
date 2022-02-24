@@ -28,9 +28,39 @@ namespace Library_MGS.Forms
             LoadData();
         }
 
+        void LoadData()
+        {
+            //string sql = "SELECT tblBorrow.BorrowID, tblStudent.StuName, tblLibrarian.LibrarianName, tblBook.BookTitle, tblBorrow.BorrowDate, tblBorrow.Remark FROM tblBorrow, tblStudent, tblLibrarian, tblBook WHERE tblStudent.StuID = tblBorrow.StuID AND tblLibrarian.LibrarianID = tblBorrow.LibrarianID AND tblBook.BookID = tblBorrow.BookID ORDER BY tblBorrow.BorrowID ASC";
+            //string sql = "SELECT * FROM tblBorrow, tblStudent, tblLibrarian, tblBook WHERE tblstudent.stuid = tblborrow.stuid AND tbllibrarian.librarianid = tblborrow.librarianid AND tblbook.bookid = tblborrow.bookid";
+
+            //string sql = "SELECT * FROM tblBorrow ORDER BY BorrowID ASC";
+            OracleCommand select_cmd = new OracleCommand("SelectBorrow", conn);
+            select_cmd.CommandType = CommandType.StoredProcedure;
+            OracleDataAdapter adapter = new OracleDataAdapter(select_cmd);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+
+            dgvBorrow.DataSource = dt;
+            btnReturn.Enabled = false;
+            btnUpdate.Enabled = false;
+            btnDelete.Enabled = false;
+        }
+
+        void ClearField()
+        {
+            txtBorrowID.Text = string.Empty;
+            cbStudentID.Text = string.Empty;
+            txtLibrarianID.Text = string.Empty;
+            cbBookID.Text = string.Empty;
+            dtpBorrowDate.Text = string.Empty;
+            dtpReturnDate.Text = string.Empty;
+            rtbRemark.Text = string.Empty;
+            txtBorrowID.Focus();
+        }
+
         string StudentID;
 
-        private void cbStudentID_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbStudentID_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             try
             {
@@ -65,7 +95,7 @@ namespace Library_MGS.Forms
 
         string BookID;
 
-        private void cbBookID_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbBookID_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             try
             {
@@ -98,37 +128,20 @@ namespace Library_MGS.Forms
             }
         }
 
-        void LoadData()
-        {
-            //string sql = "SELECT tblBorrow.BorrowID, tblStudent.StuName, tblLibrarian.LibrarianName, tblBook.BookTitle, tblBorrow.BorrowDate, tblBorrow.Remark FROM tblBorrow, tblStudent, tblLibrarian, tblBook WHERE tblStudent.StuID = tblBorrow.StuID AND tblLibrarian.LibrarianID = tblBorrow.LibrarianID AND tblBook.BookID = tblBorrow.BookID ORDER BY tblBorrow.BorrowID ASC";
-            //string sql = "SELECT * FROM tblBorrow, tblStudent, tblLibrarian, tblBook WHERE tblstudent.stuid = tblborrow.stuid AND tbllibrarian.librarianid = tblborrow.librarianid AND tblbook.bookid = tblborrow.bookid";
-
-            OracleCommand select_cmd = new OracleCommand("SelectBorrow", conn);
-            select_cmd.CommandType = CommandType.StoredProcedure;
-            OracleDataAdapter adapter = new OracleDataAdapter(select_cmd);
-            DataTable dt = new DataTable();
-            adapter.Fill(dt);
-
-            dgvBorrow.DataSource = dt;
-            btnReturn.Enabled = false;
-            btnUpdate.Enabled = false;
-            btnDelete.Enabled = false;
-        }
-
-        private void btnCreate_Click(object sender, EventArgs e)
+        private void btnBorrow_Click(object sender, EventArgs e)
         {
             try
             {
-                if (btnCreate.Text == "Borrow")
+                if (btnBorrow.Text == "Borrow")
                 {
-                    btnCreate.Text = "Save";
+                    btnBorrow.Text = "Save";
                     btnUpdate.Enabled = false;
                     btnDelete.Enabled = true;
                     btnDelete.Text = "Cancel";
                     dgvBorrow.Enabled = false;
-                    //ClearField();
+                    ClearField();
                 }
-                else if (btnCreate.Text == "Save")
+                else if (btnBorrow.Text == "Save")
                 {
                     if (string.IsNullOrEmpty(cbStudentID.Text))
                     {
@@ -136,7 +149,7 @@ namespace Library_MGS.Forms
                     }
                     else if (string.IsNullOrEmpty(cbBookID.Text))
                     {
-                        MessageBox.Show("Book ID can't not be blank!", "EMPTY FIELD", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Book IDcan't not be blank!", "EMPTY FIELD", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else if (string.IsNullOrEmpty(dtpBorrowDate.Text))
                     {
@@ -151,20 +164,20 @@ namespace Library_MGS.Forms
                         string sql = "INSERT INTO tblBorrow(StuID, LibrarianID, BookID, BorrowDate, ReturnDate, Remark) VALUES(:2, :3, :4, :5, :6, :7)";
                         OracleCommand insert_command = new OracleCommand(sql, conn);
                         insert_command.Parameters.Add(new OracleParameter("2", Int32.Parse(StudentID)));
-                        insert_command.Parameters.Add(new OracleParameter("3", /*Classes.UserLogin.getLibrarianID()*/1));
+                        insert_command.Parameters.Add(new OracleParameter("3", /*Classes.UserLogin.getLibrarianID()*/22));
                         insert_command.Parameters.Add(new OracleParameter("4", Int32.Parse(BookID)));
-                        insert_command.Parameters.Add(new OracleParameter("5", dtpBorrowDate.Value));
-                        insert_command.Parameters.Add(new OracleParameter("6", dtpReturnDate.Value));
+                        insert_command.Parameters.Add(new OracleParameter("5", dtpBorrowDate.Text));
+                        insert_command.Parameters.Add(new OracleParameter("6", dtpReturnDate.Text));
                         insert_command.Parameters.Add(new OracleParameter("7", rtbRemark.Text));
 
                         if (insert_command.ExecuteNonQuery() > 0)
                         {
                             MessageBox.Show("One record has added to Database!", "BORROWED", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            btnCreate.Text = "Borrow";
+                            btnBorrow.Text = "Borrow";
                             btnUpdate.Enabled = true;
                             btnDelete.Text = "Delete";
                             dgvBorrow.Enabled = true;
-                            //ClearField();
+                            ClearField();
                             LoadData();
                         }
                         else
@@ -182,12 +195,112 @@ namespace Library_MGS.Forms
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (MessageBox.Show("Are you sure to return, " + txtBorrowID.Text + "?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    if (string.IsNullOrEmpty(txtBorrowID.Text))
+                    {
+                        MessageBox.Show("Borrow ID can't not be blank!", "EMPTY FIELD", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else if (string.IsNullOrEmpty(cbStudentID.Text))
+                    {
+                        MessageBox.Show("Student ID can't not be blank!", "EMPTY FIELD", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else if (string.IsNullOrEmpty(cbBookID.Text))
+                    {
+                        MessageBox.Show("Book IDcan't not be blank!", "EMPTY FIELD", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else if (string.IsNullOrEmpty(dtpReturnDate.Text))
+                    {
+                        MessageBox.Show("Return Date can't not be blank!", "EMPTY FIELD", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        string sql = "INSERT INTO tblReturn(ReturnID, StuID, LibrarianID, BookID, ReturnDate, Remark) VALUES(:1, :2, :3, :4, :5, :6)";
+                        OracleCommand insert_command = new OracleCommand(sql, conn);
+                        insert_command.Parameters.Add(new OracleParameter("1", Int32.Parse(txtBorrowID.Text)));
+                        insert_command.Parameters.Add(new OracleParameter("2", Int32.Parse(StudentID)));
+                        insert_command.Parameters.Add(new OracleParameter("3", /*Classes.UserLogin.getLibrarianID()*/22));
+                        insert_command.Parameters.Add(new OracleParameter("4", Int32.Parse(BookID)));
+                        insert_command.Parameters.Add(new OracleParameter("5", dtpReturnDate.Text));
+                        insert_command.Parameters.Add(new OracleParameter("6", rtbRemark.Text));
 
+                        if (insert_command.ExecuteNonQuery() > 0)
+                        {
+                            MessageBox.Show("One record has return to Database!", "RETURNED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            DeleteBorrow();
+                            ClearField();
+                            LoadData();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Fail to return!", "FAIL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (MessageBox.Show("Are you sure to update, " + txtBorrowID.Text + "?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    if (string.IsNullOrEmpty(txtBorrowID.Text))
+                    {
+                        MessageBox.Show("Borrow ID can't not be blank!", "EMPTY FIELD", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else if (string.IsNullOrEmpty(cbStudentID.Text))
+                    {
+                        MessageBox.Show("Student ID can't not be blank!", "EMPTY FIELD", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else if (string.IsNullOrEmpty(cbBookID.Text))
+                    {
+                        MessageBox.Show("Book ID can't not be blank!", "EMPTY FIELD", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else if (string.IsNullOrEmpty(dtpBorrowDate.Text))
+                    {
+                        MessageBox.Show("Borrow Date can't not be blank!", "EMPTY FIELD", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else if (string.IsNullOrEmpty(dtpReturnDate.Text))
+                    {
+                        MessageBox.Show("Return Date not be blank!", "EMPTY FIELD", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        string sql = "UPDATE tblBorrow SET StuID = :2, LibrarianID = :3, BookID = :4, BorrowDate = :5, ReturnDate = :6, Remark = :7 WHERE BorrowID = :1";
+                        OracleCommand insert_command = new OracleCommand(sql, conn);
+                        insert_command.Parameters.Add(new OracleParameter("2", Int32.Parse(StudentID)));
+                        insert_command.Parameters.Add(new OracleParameter("3", /*Classes.UserLogin.getLibrarianID()*/22));
+                        insert_command.Parameters.Add(new OracleParameter("4", Int32.Parse(BookID)));
+                        insert_command.Parameters.Add(new OracleParameter("5", dtpBorrowDate.Text));
+                        insert_command.Parameters.Add(new OracleParameter("6", dtpReturnDate.Text));
+                        insert_command.Parameters.Add(new OracleParameter("7", rtbRemark.Text));
+                        insert_command.Parameters.Add(new OracleParameter("1", Int32.Parse(txtBorrowID.Text)));
 
+                        if (insert_command.ExecuteNonQuery() > 0)
+                        {
+                            MessageBox.Show("One record has updated to Database!", "UPDATED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            ClearField();
+                            LoadData();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Fail to update!", "FAIL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -196,7 +309,7 @@ namespace Library_MGS.Forms
             {
                 if (btnDelete.Text == "Cancel")
                 {
-                    btnCreate.Text = "Borrow";
+                    btnBorrow.Text = "Borrow";
                     btnDelete.Enabled = false;
                     btnDelete.Text = "Delete";
                     dgvBorrow.Enabled = true;
@@ -211,7 +324,7 @@ namespace Library_MGS.Forms
 
                         if (delete_cmd.ExecuteNonQuery() > 0)
                         {
-                            MessageBox.Show("One record has deleted from Database!", "CREATED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("One record has deleted from Database!", "DELETED", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             LoadData();
                         }
                         else
@@ -227,6 +340,54 @@ namespace Library_MGS.Forms
             }
         }
 
-        
+        void DeleteBorrow()
+        {
+            string sql = "DELETE tblBorrow WHERE BorrowID = :1";
+            OracleCommand delete_cmd = new OracleCommand(sql, conn);
+            delete_cmd.Parameters.Add(new OracleParameter("1", Int32.Parse(txtBorrowID.Text)));
+
+            delete_cmd.ExecuteNonQuery();
+        }
+
+        private void dgvBorrow_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                btnReturn.Enabled = true;
+                btnUpdate.Enabled = true;
+                btnDelete.Enabled = true;
+
+                txtBorrowID.Text = dgvBorrow.CurrentRow.Cells[0].Value.ToString();
+                cbStudentID.Text = dgvBorrow.CurrentRow.Cells[1].Value.ToString();
+                cbBookID.Text = dgvBorrow.CurrentRow.Cells[2].Value.ToString();
+                txtLibrarianID.Text = dgvBorrow.CurrentRow.Cells[3].Value.ToString();
+                dtpBorrowDate.Text = dgvBorrow.CurrentRow.Cells[4].Value.ToString();
+                dtpReturnDate.Text = dgvBorrow.CurrentRow.Cells[5].Value.ToString();
+                rtbRemark.Text = dgvBorrow.CurrentRow.Cells[6].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string search_sql = "SELECT bo.borrowid, s.stuname, l.librarianname, b.booktitle, bo.borrowdate, bo.returndate, bo.remark FROM tblborrow bo, tblstudent s, tbllibrarian l, tblbook b " +
+                    "WHERE s.stuid = bo.stuid AND l.librarianid = bo.librarianid AND b.bookid = bo.bookid AND UPPER (s.stuname || l.librarianname || b.booktitle || bo.remark)" + " LIKE UPPER ('%" + txtSearch.Text + "%') ORDER BY BorrowID ASC";
+                OracleCommand search_cmd = new OracleCommand(search_sql, conn);
+                OracleDataAdapter adapt = new OracleDataAdapter(search_cmd);
+                DataTable dt = new DataTable();
+                adapt.Fill(dt);
+
+                dgvBorrow.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
     }
 }

@@ -73,6 +73,7 @@ namespace Library_MGS
             this.pnDesktop.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+            lblScreen.Text = "Library Management System - " + childForm.Text;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -112,7 +113,7 @@ namespace Library_MGS
 
         private void btnLibrarian_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.LibrarianForm(), sender);
+            OpenChildForm(new Forms.Librarian(), sender);
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

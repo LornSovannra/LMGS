@@ -31,6 +31,7 @@ namespace Library_MGS.Forms
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnBlacklist = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
@@ -58,7 +59,6 @@ namespace Library_MGS.Forms
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgvStudent = new System.Windows.Forms.DataGridView();
             this.ofdPhoto = new System.Windows.Forms.OpenFileDialog();
-            this.btnBlacklist = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPhoto)).BeginInit();
@@ -111,6 +111,21 @@ namespace Library_MGS.Forms
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1175, 234);
             this.panel1.TabIndex = 2;
+            // 
+            // btnBlacklist
+            // 
+            this.btnBlacklist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(123)))), ((int)(((byte)(200)))));
+            this.btnBlacklist.FlatAppearance.BorderSize = 0;
+            this.btnBlacklist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBlacklist.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBlacklist.ForeColor = System.Drawing.Color.White;
+            this.btnBlacklist.Location = new System.Drawing.Point(972, 137);
+            this.btnBlacklist.Name = "btnBlacklist";
+            this.btnBlacklist.Size = new System.Drawing.Size(194, 40);
+            this.btnBlacklist.TabIndex = 91;
+            this.btnBlacklist.Text = "Blacklist";
+            this.btnBlacklist.UseVisualStyleBackColor = false;
+            this.btnBlacklist.Click += new System.EventHandler(this.btnBlacklist_Click);
             // 
             // btnDelete
             // 
@@ -413,21 +428,6 @@ namespace Library_MGS.Forms
             // 
             this.ofdPhoto.FileName = "openFileDialog1";
             // 
-            // btnBlacklist
-            // 
-            this.btnBlacklist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(123)))), ((int)(((byte)(200)))));
-            this.btnBlacklist.FlatAppearance.BorderSize = 0;
-            this.btnBlacklist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBlacklist.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBlacklist.ForeColor = System.Drawing.Color.White;
-            this.btnBlacklist.Location = new System.Drawing.Point(972, 137);
-            this.btnBlacklist.Name = "btnBlacklist";
-            this.btnBlacklist.Size = new System.Drawing.Size(194, 40);
-            this.btnBlacklist.TabIndex = 91;
-            this.btnBlacklist.Text = "Blacklist";
-            this.btnBlacklist.UseVisualStyleBackColor = false;
-            this.btnBlacklist.Click += new System.EventHandler(this.btnBlacklist_Click);
-            // 
             // StudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -435,7 +435,7 @@ namespace Library_MGS.Forms
             this.ClientSize = new System.Drawing.Size(1205, 662);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "StudentForm";
-            this.Text = "StudentForm";
+            this.Text = "Student";
             this.Load += new System.EventHandler(this.StudentForm_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

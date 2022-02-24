@@ -41,7 +41,7 @@ namespace Library_MGS.Forms
             this.txtLibrarianID = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnCreate = new System.Windows.Forms.Button();
+            this.btnBorrow = new System.Windows.Forms.Button();
             this.rtbRemark = new System.Windows.Forms.RichTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dtpBorrowDate = new System.Windows.Forms.DateTimePicker();
@@ -73,6 +73,7 @@ namespace Library_MGS.Forms
             this.dgvBorrow.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBorrow.Size = new System.Drawing.Size(736, 570);
             this.dgvBorrow.TabIndex = 53;
+            this.dgvBorrow.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBorrow_CellClick);
             // 
             // panel1
             // 
@@ -86,7 +87,7 @@ namespace Library_MGS.Forms
             this.panel1.Controls.Add(this.txtLibrarianID);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnUpdate);
-            this.panel1.Controls.Add(this.btnCreate);
+            this.panel1.Controls.Add(this.btnBorrow);
             this.panel1.Controls.Add(this.rtbRemark);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.dtpBorrowDate);
@@ -102,8 +103,9 @@ namespace Library_MGS.Forms
             // 
             // dtpReturnDate
             // 
+            this.dtpReturnDate.CustomFormat = "dd-MMMM-yy";
             this.dtpReturnDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpReturnDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpReturnDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpReturnDate.Location = new System.Drawing.Point(149, 286);
             this.dtpReturnDate.Name = "dtpReturnDate";
             this.dtpReturnDate.Size = new System.Drawing.Size(267, 26);
@@ -132,6 +134,7 @@ namespace Library_MGS.Forms
             this.btnReturn.TabIndex = 74;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = false;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // label5
             // 
@@ -151,6 +154,7 @@ namespace Library_MGS.Forms
             this.cbBookID.Name = "cbBookID";
             this.cbBookID.Size = new System.Drawing.Size(267, 28);
             this.cbBookID.TabIndex = 72;
+            this.cbBookID.SelectedIndexChanged += new System.EventHandler(this.cbBookID_SelectedIndexChanged_1);
             // 
             // label4
             // 
@@ -184,6 +188,7 @@ namespace Library_MGS.Forms
             this.btnDelete.TabIndex = 69;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -198,20 +203,22 @@ namespace Library_MGS.Forms
             this.btnUpdate.TabIndex = 68;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // btnCreate
+            // btnBorrow
             // 
-            this.btnCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(116)))), ((int)(((byte)(117)))));
-            this.btnCreate.FlatAppearance.BorderSize = 0;
-            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Location = new System.Drawing.Point(11, 500);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(405, 61);
-            this.btnCreate.TabIndex = 67;
-            this.btnCreate.Text = "Borrow";
-            this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnBorrow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(116)))), ((int)(((byte)(117)))));
+            this.btnBorrow.FlatAppearance.BorderSize = 0;
+            this.btnBorrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrow.ForeColor = System.Drawing.Color.White;
+            this.btnBorrow.Location = new System.Drawing.Point(11, 500);
+            this.btnBorrow.Name = "btnBorrow";
+            this.btnBorrow.Size = new System.Drawing.Size(405, 61);
+            this.btnBorrow.TabIndex = 67;
+            this.btnBorrow.Text = "Borrow";
+            this.btnBorrow.UseVisualStyleBackColor = false;
+            this.btnBorrow.Click += new System.EventHandler(this.btnBorrow_Click);
             // 
             // rtbRemark
             // 
@@ -234,8 +241,9 @@ namespace Library_MGS.Forms
             // 
             // dtpBorrowDate
             // 
+            this.dtpBorrowDate.CustomFormat = "dd-MMMM-yy";
             this.dtpBorrowDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpBorrowDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpBorrowDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpBorrowDate.Location = new System.Drawing.Point(149, 235);
             this.dtpBorrowDate.Name = "dtpBorrowDate";
             this.dtpBorrowDate.Size = new System.Drawing.Size(267, 26);
@@ -269,6 +277,7 @@ namespace Library_MGS.Forms
             this.cbStudentID.Name = "cbStudentID";
             this.cbStudentID.Size = new System.Drawing.Size(267, 28);
             this.cbStudentID.TabIndex = 61;
+            this.cbStudentID.SelectedIndexChanged += new System.EventHandler(this.cbStudentID_SelectedIndexChanged_1);
             // 
             // label1
             // 
@@ -317,6 +326,7 @@ namespace Library_MGS.Forms
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(455, 38);
             this.txtSearch.TabIndex = 56;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // BorrowForm
             // 
@@ -327,7 +337,7 @@ namespace Library_MGS.Forms
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvBorrow);
             this.Name = "BorrowForm";
-            this.Text = "BorrowForm";
+            this.Text = "Borrow";
             this.Load += new System.EventHandler(this.BorrowForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBorrow)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -351,7 +361,7 @@ namespace Library_MGS.Forms
         private System.Windows.Forms.TextBox txtLibrarianID;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnCreate;
+        private System.Windows.Forms.Button btnBorrow;
         private System.Windows.Forms.RichTextBox rtbRemark;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DateTimePicker dtpBorrowDate;

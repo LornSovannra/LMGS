@@ -349,7 +349,7 @@ namespace Library_MGS.Forms
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Name = "DashboardForm";
-            this.Text = "DashboardForm";
+            this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.DashboardForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

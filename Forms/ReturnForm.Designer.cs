@@ -81,7 +81,7 @@ namespace Library_MGS.Forms
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ReturnForm";
-            this.Text = "ReturnForm";
+            this.Text = "Return";
             this.ResumeLayout(false);
             this.PerformLayout();
 
