@@ -30,10 +30,6 @@ namespace Library_MGS.Forms
 
         void LoadData()
         {
-            //string sql = "SELECT tblBorrow.BorrowID, tblStudent.StuName, tblLibrarian.LibrarianName, tblBook.BookTitle, tblBorrow.BorrowDate, tblBorrow.Remark FROM tblBorrow, tblStudent, tblLibrarian, tblBook WHERE tblStudent.StuID = tblBorrow.StuID AND tblLibrarian.LibrarianID = tblBorrow.LibrarianID AND tblBook.BookID = tblBorrow.BookID ORDER BY tblBorrow.BorrowID ASC";
-            //string sql = "SELECT * FROM tblBorrow, tblStudent, tblLibrarian, tblBook WHERE tblstudent.stuid = tblborrow.stuid AND tbllibrarian.librarianid = tblborrow.librarianid AND tblbook.bookid = tblborrow.bookid";
-
-            //string sql = "SELECT * FROM tblBorrow ORDER BY BorrowID ASC";
             OracleCommand select_cmd = new OracleCommand("SelectBorrow", conn);
             select_cmd.CommandType = CommandType.StoredProcedure;
             OracleDataAdapter adapter = new OracleDataAdapter(select_cmd);

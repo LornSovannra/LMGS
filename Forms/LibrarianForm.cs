@@ -28,6 +28,7 @@ namespace Library_MGS.Forms
             GenderDropDown();
             PlaceOfBirthDropDown();
             AddressDropDown();
+            UserTypeDropDown();
             LoadData();
         }
 
@@ -63,6 +64,7 @@ namespace Library_MGS.Forms
             pbPhoto.Image = Resources.Avatar;
             txtUsername.Text = string.Empty;
             txtPassword.Text = string.Empty;
+            cbUserType.Text = string.Empty;
             txtLibrarianID.Focus();
         }
 
@@ -146,6 +148,18 @@ namespace Library_MGS.Forms
             foreach (string addressList in Address)
             {
                 cbAddress.Items.Add(addressList);
+            }
+        }
+
+        void UserTypeDropDown()
+        {
+            List<string> userType = new List<string>();
+            userType.Add("Admin");
+            userType.Add("User");
+
+            foreach (string userTypeList in userType)
+            {
+                cbUserType.Items.Add(userTypeList);
             }
         }
 
@@ -233,7 +247,7 @@ namespace Library_MGS.Forms
                     }
                     else
                     {
-                        string sql = "INSERT INTO tblLibrarian(LibrarianName, Gender, DOB, POB, Address, Phone, Email, Photo, UserName, UserPassword) VALUES(:2, :3, :4, :5, :6, :7, :8, :9, :10, :11)";
+                        string sql = "INSERT INTO tblLibrarian(LibrarianName, Gender, DOB, POB, Address, Phone, Email, Photo, UserName, UserPassword, UserType) VALUES(:2, :3, :4, :5, :6, :7, :8, :9, :10, :11, :12)";
                         OracleCommand insert_command = new OracleCommand(sql, conn);
                         insert_command.Parameters.Add(new OracleParameter("2", txtLibrarianName.Text));
                         insert_command.Parameters.Add(new OracleParameter("3", cbGender.Text));
@@ -249,6 +263,7 @@ namespace Library_MGS.Forms
 
                         insert_command.Parameters.Add(new OracleParameter("10", txtUsername.Text));
                         insert_command.Parameters.Add(new OracleParameter("11", txtPassword.Text));
+                        insert_command.Parameters.Add(new OracleParameter("12", cbUserType.Text));
 
                         if (insert_command.ExecuteNonQuery() > 0)
                         {
@@ -321,7 +336,7 @@ namespace Library_MGS.Forms
                     }
                     else
                     {
-                        string sql = "UPDATE tblLibrarian SET LibrarianName = :2, Gender = :3, DOB = :4, POB = :5, Address = :6, Phone = :7, Email = :8, Photo = :9, UserName = :10, UserPassword = :11 WHERE LibrarianID = :1";
+                        string sql = "UPDATE tblLibrarian SET LibrarianName = :2, Gender = :3, DOB = :4, POB = :5, Address = :6, Phone = :7, Email = :8, Photo = :9, UserName = :10, UserPassword = :11, UserType = :12 WHERE LibrarianID = :1";
                         OracleCommand update_command = new OracleCommand(sql, conn);
                         update_command.Parameters.Add(new OracleParameter("2", txtLibrarianName.Text));
                         update_command.Parameters.Add(new OracleParameter("3", cbGender.Text));
@@ -337,6 +352,7 @@ namespace Library_MGS.Forms
 
                         update_command.Parameters.Add(new OracleParameter("10", txtUsername.Text));
                         update_command.Parameters.Add(new OracleParameter("11", txtPassword.Text));
+                        update_command.Parameters.Add(new OracleParameter("12", cbUserType.Text));
                         update_command.Parameters.Add(new OracleParameter("1", Int32.Parse(txtLibrarianID.Text)));
 
                         if (update_command.ExecuteNonQuery() > 0)
@@ -414,6 +430,7 @@ namespace Library_MGS.Forms
 
                 txtUsername.Text = dgvLibrarian.CurrentRow.Cells[9].Value.ToString();
                 txtPassword.Text = dgvLibrarian.CurrentRow.Cells[10].Value.ToString();
+                cbUserType.Text = dgvLibrarian.CurrentRow.Cells[11].Value.ToString();
 
                 btnUpdate.Enabled = true;
                 btnDelete.Enabled = true;

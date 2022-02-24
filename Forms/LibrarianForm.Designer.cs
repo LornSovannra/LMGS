@@ -62,6 +62,8 @@ namespace Library_MGS.Forms
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgvLibrarian = new System.Windows.Forms.DataGridView();
             this.ofdPhoto = new System.Windows.Forms.OpenFileDialog();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cbUserType = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPhoto)).BeginInit();
@@ -86,6 +88,8 @@ namespace Library_MGS.Forms
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.cbUserType);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.btnCreate);
@@ -125,7 +129,7 @@ namespace Library_MGS.Forms
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(972, 137);
+            this.btnDelete.Location = new System.Drawing.Point(972, 181);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(194, 50);
             this.btnDelete.TabIndex = 14;
@@ -140,7 +144,7 @@ namespace Library_MGS.Forms
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(972, 81);
+            this.btnUpdate.Location = new System.Drawing.Point(972, 125);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(194, 50);
             this.btnUpdate.TabIndex = 13;
@@ -155,7 +159,7 @@ namespace Library_MGS.Forms
             this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Location = new System.Drawing.Point(972, 14);
+            this.btnCreate.Location = new System.Drawing.Point(972, 58);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(194, 61);
             this.btnCreate.TabIndex = 12;
@@ -170,9 +174,9 @@ namespace Library_MGS.Forms
             this.btnRemovePhoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemovePhoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemovePhoto.ForeColor = System.Drawing.Color.White;
-            this.btnRemovePhoto.Location = new System.Drawing.Point(799, 235);
+            this.btnRemovePhoto.Location = new System.Drawing.Point(799, 247);
             this.btnRemovePhoto.Name = "btnRemovePhoto";
-            this.btnRemovePhoto.Size = new System.Drawing.Size(156, 39);
+            this.btnRemovePhoto.Size = new System.Drawing.Size(156, 27);
             this.btnRemovePhoto.TabIndex = 11;
             this.btnRemovePhoto.Text = "Remove Photo";
             this.btnRemovePhoto.UseVisualStyleBackColor = false;
@@ -185,9 +189,9 @@ namespace Library_MGS.Forms
             this.btnSelectPhoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSelectPhoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelectPhoto.ForeColor = System.Drawing.Color.White;
-            this.btnSelectPhoto.Location = new System.Drawing.Point(799, 180);
+            this.btnSelectPhoto.Location = new System.Drawing.Point(799, 214);
             this.btnSelectPhoto.Name = "btnSelectPhoto";
-            this.btnSelectPhoto.Size = new System.Drawing.Size(156, 50);
+            this.btnSelectPhoto.Size = new System.Drawing.Size(156, 27);
             this.btnSelectPhoto.TabIndex = 10;
             this.btnSelectPhoto.Text = "Select Photo";
             this.btnSelectPhoto.UseVisualStyleBackColor = false;
@@ -197,7 +201,7 @@ namespace Library_MGS.Forms
             // 
             this.pbPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbPhoto.Image = global::Library_MGS.Properties.Resources.Avatar;
-            this.pbPhoto.Location = new System.Drawing.Point(799, 14);
+            this.pbPhoto.Location = new System.Drawing.Point(799, 56);
             this.pbPhoto.Name = "pbPhoto";
             this.pbPhoto.Size = new System.Drawing.Size(156, 151);
             this.pbPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -459,6 +463,27 @@ namespace Library_MGS.Forms
             // 
             this.ofdPhoto.FileName = "openFileDialog1";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Khmer Moul", 12F, System.Drawing.FontStyle.Bold);
+            this.label12.Location = new System.Drawing.Point(793, 14);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(110, 32);
+            this.label12.TabIndex = 92;
+            this.label12.Text = "User Type";
+            // 
+            // cbUserType
+            // 
+            this.cbUserType.DropDownHeight = 200;
+            this.cbUserType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbUserType.FormattingEnabled = true;
+            this.cbUserType.IntegralHeight = false;
+            this.cbUserType.Location = new System.Drawing.Point(905, 15);
+            this.cbUserType.Name = "cbUserType";
+            this.cbUserType.Size = new System.Drawing.Size(261, 28);
+            this.cbUserType.TabIndex = 91;
+            // 
             // Librarian
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -514,5 +539,7 @@ namespace Library_MGS.Forms
         private System.Windows.Forms.TextBox txtLibrarianID;
         private System.Windows.Forms.DataGridView dgvLibrarian;
         private System.Windows.Forms.OpenFileDialog ofdPhoto;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox cbUserType;
     }
 }
