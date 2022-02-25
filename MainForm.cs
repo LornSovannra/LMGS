@@ -81,6 +81,11 @@ namespace Library_MGS
             lblLibrarianName.Text = Classes.UserLogin.getLibrarianName();
             lblLibrarianUserType.Text = Classes.UserLogin.getUserType();
             OpenChildForm(new Forms.DashboardForm(), sender);
+
+            if(Classes.UserLogin.getUserType() != "Admin")
+            {
+                btnLibrarian.Visible = false;
+            }
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
