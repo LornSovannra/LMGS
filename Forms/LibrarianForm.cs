@@ -245,6 +245,10 @@ namespace Library_MGS.Forms
                     {
                         MessageBox.Show("Password can't not be blank!", "EMPTY FIELD", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
+                    else if (string.IsNullOrEmpty(cbUserType.Text))
+                    {
+                        MessageBox.Show("User Type can't not be blank!", "EMPTY FIELD", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                     else
                     {
                         string sql = "INSERT INTO tblLibrarian(LibrarianName, Gender, DOB, POB, Address, Phone, Email, Photo, UserName, UserPassword, UserType) VALUES(:2, :3, :4, :5, :6, :7, :8, :9, :10, :11, :12)";
@@ -333,6 +337,10 @@ namespace Library_MGS.Forms
                     else if (string.IsNullOrEmpty(txtPassword.Text))
                     {
                         MessageBox.Show("Password can't not be blank!", "EMPTY FIELD", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else if (string.IsNullOrEmpty(cbUserType.Text))
+                    {
+                        MessageBox.Show("User Type can't not be blank!", "EMPTY FIELD", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
                     {
@@ -454,6 +462,22 @@ namespace Library_MGS.Forms
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void cbUserType_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnCreate.PerformClick();
+                e.SuppressKeyPress = true;
+                e.Handled = true;
+            }
+            else if (e.KeyCode == Keys.Escape)
+            {
+                btnDelete.PerformClick();
+                e.SuppressKeyPress = true;
+                e.Handled = true;
             }
         }
     }

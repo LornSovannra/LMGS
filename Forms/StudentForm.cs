@@ -449,5 +449,21 @@ namespace Library_MGS.Forms
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+
+        private void txtPhone_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnCreate.PerformClick();
+                e.SuppressKeyPress = true;
+                e.Handled = true;
+            }
+            else if(e.KeyCode == Keys.Escape)
+            {
+                btnDelete.PerformClick();
+                e.SuppressKeyPress = true;
+                e.Handled = true;
+            }
+        }
     }
 }

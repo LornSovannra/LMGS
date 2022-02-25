@@ -232,6 +232,7 @@ namespace Library_MGS.Forms
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(217, 39);
             this.txtPhone.TabIndex = 7;
+            this.txtPhone.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPhone_KeyDown);
             // 
             // label5
             // 

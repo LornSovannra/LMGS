@@ -111,7 +111,7 @@ namespace Library_MGS.Forms
                         //Save User Login Info
                         Classes.UserLogin.setLibrarianID(dt.Rows[0]["LibrarianID"].ToString());
                         Classes.UserLogin.setLibrarianName(dt.Rows[0]["LibrarianName"].ToString());
-                        Classes.UserLogin.setLibrarianName(dt.Rows[0]["UserType"].ToString());
+                        Classes.UserLogin.setUserType(dt.Rows[0]["UserType"].ToString());
 
                         //Show MainForm
                         MainForm frm = new MainForm();
@@ -154,6 +154,26 @@ namespace Library_MGS.Forms
             {
                 txtPassword.UseSystemPasswordChar = true;
                 btnShowHidePassword.Image = Resources.visible_24px_new;
+            }
+        }
+
+        private void txtUsername_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
+                e.SuppressKeyPress = true;
+                e.Handled = true;
+            }
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
+                e.SuppressKeyPress = true;
+                e.Handled = true;
             }
         }
     }

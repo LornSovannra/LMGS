@@ -160,7 +160,7 @@ namespace Library_MGS.Forms
                         string sql = "INSERT INTO tblBorrow(StuID, LibrarianID, BookID, BorrowDate, ReturnDate, Remark) VALUES(:2, :3, :4, :5, :6, :7)";
                         OracleCommand insert_command = new OracleCommand(sql, conn);
                         insert_command.Parameters.Add(new OracleParameter("2", Int32.Parse(StudentID)));
-                        insert_command.Parameters.Add(new OracleParameter("3", /*Classes.UserLogin.getLibrarianID()*/22));
+                        insert_command.Parameters.Add(new OracleParameter("3", Classes.UserLogin.getLibrarianID()));
                         insert_command.Parameters.Add(new OracleParameter("4", Int32.Parse(BookID)));
                         insert_command.Parameters.Add(new OracleParameter("5", dtpBorrowDate.Text));
                         insert_command.Parameters.Add(new OracleParameter("6", dtpReturnDate.Text));
@@ -217,7 +217,7 @@ namespace Library_MGS.Forms
                         OracleCommand insert_command = new OracleCommand(sql, conn);
                         insert_command.Parameters.Add(new OracleParameter("1", Int32.Parse(txtBorrowID.Text)));
                         insert_command.Parameters.Add(new OracleParameter("2", Int32.Parse(StudentID)));
-                        insert_command.Parameters.Add(new OracleParameter("3", /*Classes.UserLogin.getLibrarianID()*/22));
+                        insert_command.Parameters.Add(new OracleParameter("3", Classes.UserLogin.getLibrarianID()));
                         insert_command.Parameters.Add(new OracleParameter("4", Int32.Parse(BookID)));
                         insert_command.Parameters.Add(new OracleParameter("5", dtpReturnDate.Text));
                         insert_command.Parameters.Add(new OracleParameter("6", rtbRemark.Text));
@@ -273,7 +273,7 @@ namespace Library_MGS.Forms
                         string sql = "UPDATE tblBorrow SET StuID = :2, LibrarianID = :3, BookID = :4, BorrowDate = :5, ReturnDate = :6, Remark = :7 WHERE BorrowID = :1";
                         OracleCommand insert_command = new OracleCommand(sql, conn);
                         insert_command.Parameters.Add(new OracleParameter("2", Int32.Parse(StudentID)));
-                        insert_command.Parameters.Add(new OracleParameter("3", /*Classes.UserLogin.getLibrarianID()*/22));
+                        insert_command.Parameters.Add(new OracleParameter("3", Classes.UserLogin.getLibrarianID()));
                         insert_command.Parameters.Add(new OracleParameter("4", Int32.Parse(BookID)));
                         insert_command.Parameters.Add(new OracleParameter("5", dtpBorrowDate.Text));
                         insert_command.Parameters.Add(new OracleParameter("6", dtpReturnDate.Text));
@@ -383,6 +383,22 @@ namespace Library_MGS.Forms
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void rtbRemark_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnBorrow.PerformClick();
+                e.SuppressKeyPress = true;
+                e.Handled = true;
+            }
+            else if (e.KeyCode == Keys.Escape)
+            {
+                btnDelete.PerformClick();
+                e.SuppressKeyPress = true;
+                e.Handled = true;
             }
         }
     }

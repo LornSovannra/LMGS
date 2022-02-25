@@ -105,5 +105,13 @@ namespace Library_MGS.Forms
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+
+        private void BlacklistForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnRelease_Click(sender, new EventArgs());
+            }
+        }
     }
 }

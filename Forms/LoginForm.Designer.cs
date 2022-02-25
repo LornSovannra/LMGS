@@ -30,16 +30,16 @@ namespace Library_MGS.Forms
         private void InitializeComponent()
         {
             this.loginPanel = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.lblForgotPassword = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.btnShowHidePassword = new System.Windows.Forms.Button();
             this.pbImage = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.lblForgotPassword = new System.Windows.Forms.Label();
             this.pbExit = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.loginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
@@ -70,83 +70,6 @@ namespace Library_MGS.Forms
             this.loginPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.loginPanel_MouseMove);
             this.loginPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.loginPanel_MouseUp);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Khmer Moul", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.label4.Location = new System.Drawing.Point(50, 140);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 32);
-            this.label4.TabIndex = 75;
-            this.label4.Text = "Username";
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.Font = new System.Drawing.Font("Khmer Moul", 12F, System.Drawing.FontStyle.Bold);
-            this.txtUsername.Location = new System.Drawing.Point(56, 175);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(315, 39);
-            this.txtUsername.TabIndex = 74;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Khmer Moul", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.label1.Location = new System.Drawing.Point(50, 230);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 32);
-            this.label1.TabIndex = 77;
-            this.label1.Text = "Password";
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Font = new System.Drawing.Font("Khmer Moul", 12F, System.Drawing.FontStyle.Bold);
-            this.txtPassword.Location = new System.Drawing.Point(56, 265);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(315, 39);
-            this.txtPassword.TabIndex = 76;
-            this.txtPassword.UseSystemPasswordChar = true;
-            // 
-            // lblForgotPassword
-            // 
-            this.lblForgotPassword.AutoSize = true;
-            this.lblForgotPassword.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblForgotPassword.Font = new System.Drawing.Font("Khmer Moul", 9F, System.Drawing.FontStyle.Bold);
-            this.lblForgotPassword.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblForgotPassword.Location = new System.Drawing.Point(236, 318);
-            this.lblForgotPassword.Name = "lblForgotPassword";
-            this.lblForgotPassword.Size = new System.Drawing.Size(135, 24);
-            this.lblForgotPassword.TabIndex = 79;
-            this.lblForgotPassword.Text = "Forgot Password?";
-            this.lblForgotPassword.Click += new System.EventHandler(this.lblForgotPassword_Click);
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(56, 359);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(315, 54);
-            this.btnLogin.TabIndex = 80;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Khmer Moul", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(186, 84);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 35);
-            this.label3.TabIndex = 81;
-            this.label3.Text = "អំណាន";
-            // 
             // btnShowHidePassword
             // 
             this.btnShowHidePassword.BackColor = System.Drawing.Color.Transparent;
@@ -154,7 +77,7 @@ namespace Library_MGS.Forms
             this.btnShowHidePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShowHidePassword.ForeColor = System.Drawing.Color.Transparent;
             this.btnShowHidePassword.Image = global::Library_MGS.Properties.Resources.visible_24px_new;
-            this.btnShowHidePassword.Location = new System.Drawing.Point(332, 272);
+            this.btnShowHidePassword.Location = new System.Drawing.Point(322, 272);
             this.btnShowHidePassword.Name = "btnShowHidePassword";
             this.btnShowHidePassword.Size = new System.Drawing.Size(30, 23);
             this.btnShowHidePassword.TabIndex = 83;
@@ -175,6 +98,44 @@ namespace Library_MGS.Forms
             this.pbImage.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pbImage_MouseMove);
             this.pbImage.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pbImage_MouseUp);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Khmer Moul", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(176, 84);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 35);
+            this.label3.TabIndex = 81;
+            this.label3.Text = "អំណាន";
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(46, 359);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(315, 54);
+            this.btnLogin.TabIndex = 80;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // lblForgotPassword
+            // 
+            this.lblForgotPassword.AutoSize = true;
+            this.lblForgotPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblForgotPassword.Font = new System.Drawing.Font("Khmer Moul", 9F, System.Drawing.FontStyle.Bold);
+            this.lblForgotPassword.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblForgotPassword.Location = new System.Drawing.Point(226, 318);
+            this.lblForgotPassword.Name = "lblForgotPassword";
+            this.lblForgotPassword.Size = new System.Drawing.Size(135, 24);
+            this.lblForgotPassword.TabIndex = 79;
+            this.lblForgotPassword.Text = "Forgot Password?";
+            this.lblForgotPassword.Click += new System.EventHandler(this.lblForgotPassword_Click);
+            // 
             // pbExit
             // 
             this.pbExit.Image = global::Library_MGS.Properties.Resources.Close_512px;
@@ -186,10 +147,51 @@ namespace Library_MGS.Forms
             this.pbExit.TabStop = false;
             this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Khmer Moul", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
+            this.label1.Location = new System.Drawing.Point(40, 230);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 32);
+            this.label1.TabIndex = 77;
+            this.label1.Text = "Password";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Font = new System.Drawing.Font("Khmer Moul", 12F, System.Drawing.FontStyle.Bold);
+            this.txtPassword.Location = new System.Drawing.Point(46, 265);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(315, 39);
+            this.txtPassword.TabIndex = 76;
+            this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Khmer Moul", 12F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
+            this.label4.Location = new System.Drawing.Point(40, 140);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(109, 32);
+            this.label4.TabIndex = 75;
+            this.label4.Text = "Username";
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Font = new System.Drawing.Font("Khmer Moul", 12F, System.Drawing.FontStyle.Bold);
+            this.txtUsername.Location = new System.Drawing.Point(46, 175);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(315, 39);
+            this.txtUsername.TabIndex = 74;
+            this.txtUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUsername_KeyDown);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Library_MGS.Properties.Resources.reading_100px;
-            this.pictureBox1.Location = new System.Drawing.Point(192, 31);
+            this.pictureBox1.Location = new System.Drawing.Point(182, 31);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(50, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

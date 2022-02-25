@@ -348,5 +348,21 @@ namespace Library_MGS.Forms
                 e.Handled = true;
             }
         }
+
+        private void rtbRemark_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnCreate.PerformClick();
+                e.SuppressKeyPress = true;
+                e.Handled = true;
+            }
+            else if (e.KeyCode == Keys.Escape)
+            {
+                btnDelete.PerformClick();
+                e.SuppressKeyPress = true;
+                e.Handled = true;
+            }
+        }
     }
 }

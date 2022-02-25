@@ -31,6 +31,8 @@ namespace Library_MGS.Forms
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cbUserType = new System.Windows.Forms.ComboBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
@@ -62,8 +64,6 @@ namespace Library_MGS.Forms
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgvLibrarian = new System.Windows.Forms.DataGridView();
             this.ofdPhoto = new System.Windows.Forms.OpenFileDialog();
-            this.label12 = new System.Windows.Forms.Label();
-            this.cbUserType = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPhoto)).BeginInit();
@@ -122,6 +122,28 @@ namespace Library_MGS.Forms
             this.panel1.Size = new System.Drawing.Size(1175, 289);
             this.panel1.TabIndex = 2;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Khmer Moul", 12F, System.Drawing.FontStyle.Bold);
+            this.label12.Location = new System.Drawing.Point(793, 14);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(110, 32);
+            this.label12.TabIndex = 92;
+            this.label12.Text = "User Type";
+            // 
+            // cbUserType
+            // 
+            this.cbUserType.DropDownHeight = 200;
+            this.cbUserType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbUserType.FormattingEnabled = true;
+            this.cbUserType.IntegralHeight = false;
+            this.cbUserType.Location = new System.Drawing.Point(905, 15);
+            this.cbUserType.Name = "cbUserType";
+            this.cbUserType.Size = new System.Drawing.Size(261, 28);
+            this.cbUserType.TabIndex = 10;
+            this.cbUserType.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbUserType_KeyDown);
+            // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(65)))), ((int)(((byte)(68)))));
@@ -132,7 +154,7 @@ namespace Library_MGS.Forms
             this.btnDelete.Location = new System.Drawing.Point(972, 181);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(194, 50);
-            this.btnDelete.TabIndex = 14;
+            this.btnDelete.TabIndex = 15;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -147,7 +169,7 @@ namespace Library_MGS.Forms
             this.btnUpdate.Location = new System.Drawing.Point(972, 125);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(194, 50);
-            this.btnUpdate.TabIndex = 13;
+            this.btnUpdate.TabIndex = 14;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -162,7 +184,7 @@ namespace Library_MGS.Forms
             this.btnCreate.Location = new System.Drawing.Point(972, 58);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(194, 61);
-            this.btnCreate.TabIndex = 12;
+            this.btnCreate.TabIndex = 13;
             this.btnCreate.Text = "Create";
             this.btnCreate.UseVisualStyleBackColor = false;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
@@ -177,7 +199,7 @@ namespace Library_MGS.Forms
             this.btnRemovePhoto.Location = new System.Drawing.Point(799, 247);
             this.btnRemovePhoto.Name = "btnRemovePhoto";
             this.btnRemovePhoto.Size = new System.Drawing.Size(156, 27);
-            this.btnRemovePhoto.TabIndex = 11;
+            this.btnRemovePhoto.TabIndex = 12;
             this.btnRemovePhoto.Text = "Remove Photo";
             this.btnRemovePhoto.UseVisualStyleBackColor = false;
             this.btnRemovePhoto.Click += new System.EventHandler(this.btnRemovePhoto_Click);
@@ -192,7 +214,7 @@ namespace Library_MGS.Forms
             this.btnSelectPhoto.Location = new System.Drawing.Point(799, 214);
             this.btnSelectPhoto.Name = "btnSelectPhoto";
             this.btnSelectPhoto.Size = new System.Drawing.Size(156, 27);
-            this.btnSelectPhoto.TabIndex = 10;
+            this.btnSelectPhoto.TabIndex = 11;
             this.btnSelectPhoto.Text = "Select Photo";
             this.btnSelectPhoto.UseVisualStyleBackColor = false;
             this.btnSelectPhoto.Click += new System.EventHandler(this.btnSelectPhoto_Click);
@@ -462,27 +484,6 @@ namespace Library_MGS.Forms
             // ofdPhoto
             // 
             this.ofdPhoto.FileName = "openFileDialog1";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Khmer Moul", 12F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(793, 14);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(110, 32);
-            this.label12.TabIndex = 92;
-            this.label12.Text = "User Type";
-            // 
-            // cbUserType
-            // 
-            this.cbUserType.DropDownHeight = 200;
-            this.cbUserType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbUserType.FormattingEnabled = true;
-            this.cbUserType.IntegralHeight = false;
-            this.cbUserType.Location = new System.Drawing.Point(905, 15);
-            this.cbUserType.Name = "cbUserType";
-            this.cbUserType.Size = new System.Drawing.Size(261, 28);
-            this.cbUserType.TabIndex = 91;
             // 
             // Librarian
             // 

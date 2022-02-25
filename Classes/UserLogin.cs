@@ -19,9 +19,9 @@ namespace Library_MGS.Classes
             LibrarianID = id;
         }
 
-        public static void setLibrarianName(string photo)
+        public static void setLibrarianName(string name)
         {
-            LibrarianName = photo;
+            LibrarianName = name;
         }
 
         public static void setUserType(string userType)

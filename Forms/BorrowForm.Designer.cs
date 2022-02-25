@@ -109,7 +109,7 @@ namespace Library_MGS.Forms
             this.dtpReturnDate.Location = new System.Drawing.Point(149, 286);
             this.dtpReturnDate.Name = "dtpReturnDate";
             this.dtpReturnDate.Size = new System.Drawing.Size(267, 26);
-            this.dtpReturnDate.TabIndex = 75;
+            this.dtpReturnDate.TabIndex = 5;
             // 
             // label3
             // 
@@ -131,7 +131,7 @@ namespace Library_MGS.Forms
             this.btnReturn.Location = new System.Drawing.Point(11, 567);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(185, 50);
-            this.btnReturn.TabIndex = 74;
+            this.btnReturn.TabIndex = 8;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
@@ -153,7 +153,7 @@ namespace Library_MGS.Forms
             this.cbBookID.Location = new System.Drawing.Point(149, 187);
             this.cbBookID.Name = "cbBookID";
             this.cbBookID.Size = new System.Drawing.Size(267, 28);
-            this.cbBookID.TabIndex = 72;
+            this.cbBookID.TabIndex = 3;
             this.cbBookID.SelectedIndexChanged += new System.EventHandler(this.cbBookID_SelectedIndexChanged_1);
             // 
             // label4
@@ -173,7 +173,7 @@ namespace Library_MGS.Forms
             this.txtLibrarianID.Location = new System.Drawing.Point(149, 70);
             this.txtLibrarianID.Name = "txtLibrarianID";
             this.txtLibrarianID.Size = new System.Drawing.Size(267, 39);
-            this.txtLibrarianID.TabIndex = 70;
+            this.txtLibrarianID.TabIndex = 1;
             // 
             // btnDelete
             // 
@@ -185,7 +185,7 @@ namespace Library_MGS.Forms
             this.btnDelete.Location = new System.Drawing.Point(312, 567);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(104, 50);
-            this.btnDelete.TabIndex = 69;
+            this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -200,7 +200,7 @@ namespace Library_MGS.Forms
             this.btnUpdate.Location = new System.Drawing.Point(202, 567);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(104, 50);
-            this.btnUpdate.TabIndex = 68;
+            this.btnUpdate.TabIndex = 9;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -215,7 +215,7 @@ namespace Library_MGS.Forms
             this.btnBorrow.Location = new System.Drawing.Point(11, 500);
             this.btnBorrow.Name = "btnBorrow";
             this.btnBorrow.Size = new System.Drawing.Size(405, 61);
-            this.btnBorrow.TabIndex = 67;
+            this.btnBorrow.TabIndex = 7;
             this.btnBorrow.Text = "Borrow";
             this.btnBorrow.UseVisualStyleBackColor = false;
             this.btnBorrow.Click += new System.EventHandler(this.btnBorrow_Click);
@@ -226,8 +226,9 @@ namespace Library_MGS.Forms
             this.rtbRemark.Location = new System.Drawing.Point(149, 332);
             this.rtbRemark.Name = "rtbRemark";
             this.rtbRemark.Size = new System.Drawing.Size(267, 149);
-            this.rtbRemark.TabIndex = 65;
+            this.rtbRemark.TabIndex = 6;
             this.rtbRemark.Text = "";
+            this.rtbRemark.KeyDown += new System.Windows.Forms.KeyEventHandler(this.rtbRemark_KeyDown);
             // 
             // label10
             // 
@@ -247,7 +248,7 @@ namespace Library_MGS.Forms
             this.dtpBorrowDate.Location = new System.Drawing.Point(149, 235);
             this.dtpBorrowDate.Name = "dtpBorrowDate";
             this.dtpBorrowDate.Size = new System.Drawing.Size(267, 26);
-            this.dtpBorrowDate.TabIndex = 63;
+            this.dtpBorrowDate.TabIndex = 4;
             // 
             // label6
             // 
@@ -276,7 +277,7 @@ namespace Library_MGS.Forms
             this.cbStudentID.Location = new System.Drawing.Point(149, 136);
             this.cbStudentID.Name = "cbStudentID";
             this.cbStudentID.Size = new System.Drawing.Size(267, 28);
-            this.cbStudentID.TabIndex = 61;
+            this.cbStudentID.TabIndex = 2;
             this.cbStudentID.SelectedIndexChanged += new System.EventHandler(this.cbStudentID_SelectedIndexChanged_1);
             // 
             // label1
@@ -296,7 +297,7 @@ namespace Library_MGS.Forms
             this.txtBorrowID.Location = new System.Drawing.Point(149, 11);
             this.txtBorrowID.Name = "txtBorrowID";
             this.txtBorrowID.Size = new System.Drawing.Size(267, 39);
-            this.txtBorrowID.TabIndex = 59;
+            this.txtBorrowID.TabIndex = 0;
             // 
             // panel2
             // 

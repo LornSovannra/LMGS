@@ -31,6 +31,18 @@ namespace Library_MGS.Forms
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.rtbRemark = new System.Windows.Forms.RichTextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cbBookTypeID = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtBookSource = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtPublisher = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtNumCopies = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtNumOfPages = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
@@ -46,18 +58,6 @@ namespace Library_MGS.Forms
             this.label11 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgvBook = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtNumOfPages = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtNumCopies = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtPublisher = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtBookSource = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cbBookTypeID = new System.Windows.Forms.ComboBox();
-            this.rtbRemark = new System.Windows.Forms.RichTextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -110,6 +110,126 @@ namespace Library_MGS.Forms
             this.panel1.Size = new System.Drawing.Size(1175, 234);
             this.panel1.TabIndex = 2;
             // 
+            // rtbRemark
+            // 
+            this.rtbRemark.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtbRemark.Location = new System.Drawing.Point(772, 108);
+            this.rtbRemark.Name = "rtbRemark";
+            this.rtbRemark.Size = new System.Drawing.Size(277, 112);
+            this.rtbRemark.TabIndex = 9;
+            this.rtbRemark.Text = "";
+            this.rtbRemark.KeyDown += new System.Windows.Forms.KeyEventHandler(this.rtbRemark_KeyDown);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Khmer Moul", 12F, System.Drawing.FontStyle.Bold);
+            this.label10.Location = new System.Drawing.Point(766, 73);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(86, 32);
+            this.label10.TabIndex = 103;
+            this.label10.Text = "Remark";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Khmer Moul", 12F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(766, 20);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(86, 32);
+            this.label9.TabIndex = 101;
+            this.label9.Text = "Type ID";
+            // 
+            // cbBookTypeID
+            // 
+            this.cbBookTypeID.DropDownHeight = 200;
+            this.cbBookTypeID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbBookTypeID.FormattingEnabled = true;
+            this.cbBookTypeID.IntegralHeight = false;
+            this.cbBookTypeID.Location = new System.Drawing.Point(858, 20);
+            this.cbBookTypeID.Name = "cbBookTypeID";
+            this.cbBookTypeID.Size = new System.Drawing.Size(191, 28);
+            this.cbBookTypeID.TabIndex = 8;
+            this.cbBookTypeID.SelectedIndexChanged += new System.EventHandler(this.cbBookTypeID_SelectedIndexChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Khmer Moul", 12F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(399, 184);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(131, 32);
+            this.label8.TabIndex = 99;
+            this.label8.Text = "Book Source";
+            // 
+            // txtBookSource
+            // 
+            this.txtBookSource.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBookSource.Font = new System.Drawing.Font("Khmer Moul", 12F, System.Drawing.FontStyle.Bold);
+            this.txtBookSource.Location = new System.Drawing.Point(531, 181);
+            this.txtBookSource.Name = "txtBookSource";
+            this.txtBookSource.Size = new System.Drawing.Size(215, 39);
+            this.txtBookSource.TabIndex = 7;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Khmer Moul", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(399, 127);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(105, 32);
+            this.label5.TabIndex = 97;
+            this.label5.Text = "Publisher";
+            // 
+            // txtPublisher
+            // 
+            this.txtPublisher.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPublisher.Font = new System.Drawing.Font("Khmer Moul", 12F, System.Drawing.FontStyle.Bold);
+            this.txtPublisher.Location = new System.Drawing.Point(531, 124);
+            this.txtPublisher.Name = "txtPublisher";
+            this.txtPublisher.Size = new System.Drawing.Size(215, 39);
+            this.txtPublisher.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Khmer Moul", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(399, 19);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(126, 32);
+            this.label3.TabIndex = 95;
+            this.label3.Text = "Num Copies";
+            // 
+            // txtNumCopies
+            // 
+            this.txtNumCopies.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNumCopies.Font = new System.Drawing.Font("Khmer Moul", 12F, System.Drawing.FontStyle.Bold);
+            this.txtNumCopies.Location = new System.Drawing.Point(531, 14);
+            this.txtNumCopies.Name = "txtNumCopies";
+            this.txtNumCopies.Size = new System.Drawing.Size(215, 39);
+            this.txtNumCopies.TabIndex = 4;
+            this.txtNumCopies.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumCopies_KeyPress);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Khmer Moul", 12F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(13, 184);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(143, 32);
+            this.label7.TabIndex = 93;
+            this.label7.Text = "Num of Pages";
+            // 
+            // txtNumOfPages
+            // 
+            this.txtNumOfPages.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNumOfPages.Font = new System.Drawing.Font("Khmer Moul", 12F, System.Drawing.FontStyle.Bold);
+            this.txtNumOfPages.Location = new System.Drawing.Point(159, 180);
+            this.txtNumOfPages.Name = "txtNumOfPages";
+            this.txtNumOfPages.Size = new System.Drawing.Size(217, 39);
+            this.txtNumOfPages.TabIndex = 3;
+            this.txtNumOfPages.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumOfPages_KeyPress);
+            // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(65)))), ((int)(((byte)(68)))));
@@ -120,7 +240,7 @@ namespace Library_MGS.Forms
             this.btnDelete.Location = new System.Drawing.Point(1065, 137);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(101, 50);
-            this.btnDelete.TabIndex = 14;
+            this.btnDelete.TabIndex = 12;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -135,7 +255,7 @@ namespace Library_MGS.Forms
             this.btnUpdate.Location = new System.Drawing.Point(1065, 81);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(101, 50);
-            this.btnUpdate.TabIndex = 13;
+            this.btnUpdate.TabIndex = 11;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -150,7 +270,7 @@ namespace Library_MGS.Forms
             this.btnCreate.Location = new System.Drawing.Point(1065, 14);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(101, 61);
-            this.btnCreate.TabIndex = 12;
+            this.btnCreate.TabIndex = 10;
             this.btnCreate.Text = "Create";
             this.btnCreate.UseVisualStyleBackColor = false;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
@@ -174,7 +294,7 @@ namespace Library_MGS.Forms
             this.cbEdition.Location = new System.Drawing.Point(531, 74);
             this.cbEdition.Name = "cbEdition";
             this.cbEdition.Size = new System.Drawing.Size(215, 28);
-            this.cbEdition.TabIndex = 4;
+            this.cbEdition.TabIndex = 5;
             // 
             // dtpPublishDate
             // 
@@ -184,7 +304,7 @@ namespace Library_MGS.Forms
             this.dtpPublishDate.Location = new System.Drawing.Point(159, 129);
             this.dtpPublishDate.Name = "dtpPublishDate";
             this.dtpPublishDate.Size = new System.Drawing.Size(217, 26);
-            this.dtpPublishDate.TabIndex = 3;
+            this.dtpPublishDate.TabIndex = 2;
             // 
             // label6
             // 
@@ -284,125 +404,6 @@ namespace Library_MGS.Forms
             this.dgvBook.Size = new System.Drawing.Size(1175, 570);
             this.dgvBook.TabIndex = 54;
             this.dgvBook.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBook_CellClick);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Khmer Moul", 12F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(13, 184);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(143, 32);
-            this.label7.TabIndex = 93;
-            this.label7.Text = "Num of Pages";
-            // 
-            // txtNumOfPages
-            // 
-            this.txtNumOfPages.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNumOfPages.Font = new System.Drawing.Font("Khmer Moul", 12F, System.Drawing.FontStyle.Bold);
-            this.txtNumOfPages.Location = new System.Drawing.Point(159, 180);
-            this.txtNumOfPages.Name = "txtNumOfPages";
-            this.txtNumOfPages.Size = new System.Drawing.Size(217, 39);
-            this.txtNumOfPages.TabIndex = 92;
-            this.txtNumOfPages.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumOfPages_KeyPress);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Khmer Moul", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(399, 19);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 32);
-            this.label3.TabIndex = 95;
-            this.label3.Text = "Num Copies";
-            // 
-            // txtNumCopies
-            // 
-            this.txtNumCopies.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNumCopies.Font = new System.Drawing.Font("Khmer Moul", 12F, System.Drawing.FontStyle.Bold);
-            this.txtNumCopies.Location = new System.Drawing.Point(531, 14);
-            this.txtNumCopies.Name = "txtNumCopies";
-            this.txtNumCopies.Size = new System.Drawing.Size(215, 39);
-            this.txtNumCopies.TabIndex = 94;
-            this.txtNumCopies.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumCopies_KeyPress);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Khmer Moul", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(399, 127);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 32);
-            this.label5.TabIndex = 97;
-            this.label5.Text = "Publisher";
-            // 
-            // txtPublisher
-            // 
-            this.txtPublisher.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPublisher.Font = new System.Drawing.Font("Khmer Moul", 12F, System.Drawing.FontStyle.Bold);
-            this.txtPublisher.Location = new System.Drawing.Point(531, 124);
-            this.txtPublisher.Name = "txtPublisher";
-            this.txtPublisher.Size = new System.Drawing.Size(215, 39);
-            this.txtPublisher.TabIndex = 96;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Khmer Moul", 12F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(399, 184);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(131, 32);
-            this.label8.TabIndex = 99;
-            this.label8.Text = "Book Source";
-            // 
-            // txtBookSource
-            // 
-            this.txtBookSource.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBookSource.Font = new System.Drawing.Font("Khmer Moul", 12F, System.Drawing.FontStyle.Bold);
-            this.txtBookSource.Location = new System.Drawing.Point(531, 181);
-            this.txtBookSource.Name = "txtBookSource";
-            this.txtBookSource.Size = new System.Drawing.Size(215, 39);
-            this.txtBookSource.TabIndex = 98;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Khmer Moul", 12F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(766, 20);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(86, 32);
-            this.label9.TabIndex = 101;
-            this.label9.Text = "Type ID";
-            // 
-            // cbBookTypeID
-            // 
-            this.cbBookTypeID.DropDownHeight = 200;
-            this.cbBookTypeID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbBookTypeID.FormattingEnabled = true;
-            this.cbBookTypeID.IntegralHeight = false;
-            this.cbBookTypeID.Location = new System.Drawing.Point(858, 20);
-            this.cbBookTypeID.Name = "cbBookTypeID";
-            this.cbBookTypeID.Size = new System.Drawing.Size(191, 28);
-            this.cbBookTypeID.TabIndex = 100;
-            this.cbBookTypeID.SelectedIndexChanged += new System.EventHandler(this.cbBookTypeID_SelectedIndexChanged);
-            // 
-            // rtbRemark
-            // 
-            this.rtbRemark.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtbRemark.Location = new System.Drawing.Point(772, 108);
-            this.rtbRemark.Name = "rtbRemark";
-            this.rtbRemark.Size = new System.Drawing.Size(277, 112);
-            this.rtbRemark.TabIndex = 102;
-            this.rtbRemark.Text = "";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Khmer Moul", 12F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(766, 73);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(86, 32);
-            this.label10.TabIndex = 103;
-            this.label10.Text = "Remark";
             // 
             // BookForm
             // 

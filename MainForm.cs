@@ -73,11 +73,13 @@ namespace Library_MGS
             this.pnDesktop.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-            lblScreen.Text = "Library Management System - " + childForm.Text;
+            lblScreen.Text = "Library Management System - [" + childForm.Text + "]";
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            lblLibrarianName.Text = Classes.UserLogin.getLibrarianName();
+            lblLibrarianUserType.Text = Classes.UserLogin.getUserType();
             OpenChildForm(new Forms.DashboardForm(), sender);
         }
 
@@ -131,6 +133,38 @@ namespace Library_MGS
             if (MessageBox.Show("Are you sure you want to exit?", "You're going to exit this application.", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Application.Exit();
+            }
+        }
+
+        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Alt && e.KeyCode == Keys.D)
+            {
+                OpenChildForm(new Forms.DashboardForm(), sender);
+            }
+            else if(e.Alt && e.KeyCode == Keys.B)
+            {
+                OpenChildForm(new Forms.BorrowForm(), sender);
+            }
+            else if (e.Alt && e.KeyCode == Keys.E)
+            {
+                OpenChildForm(new Forms.ReturnForm(), sender);
+            }
+            else if (e.Alt && e.KeyCode == Keys.O)
+            {
+                OpenChildForm(new Forms.BookForm(), sender);
+            }
+            else if (e.Alt && e.KeyCode == Keys.A)
+            {
+                OpenChildForm(new Forms.BlacklistForm(), sender);
+            }
+            else if (e.Alt && e.KeyCode == Keys.S)
+            {
+                OpenChildForm(new Forms.StudentForm(), sender);
+            }
+            else if (e.Alt && e.KeyCode == Keys.L)
+            {
+                OpenChildForm(new Forms.Librarian(), sender);
             }
         }
     }

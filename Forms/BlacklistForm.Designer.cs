@@ -125,6 +125,7 @@ namespace Library_MGS.Forms
             this.Name = "BlacklistForm";
             this.Text = "Blacklist";
             this.Load += new System.EventHandler(this.BlacklistForm_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.BlacklistForm_KeyDown);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
