@@ -296,5 +296,8 @@
   <ItemGroup>
     <None Include="Resources\invisible_24px_new.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Screenshots\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

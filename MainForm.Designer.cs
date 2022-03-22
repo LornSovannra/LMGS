@@ -335,7 +335,7 @@ namespace Library_MGS
             this.Controls.Add(this.pnNavigation);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Library Management System";
+            this.Text = "Librarian";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
             this.pnNavigation.ResumeLayout(false);
